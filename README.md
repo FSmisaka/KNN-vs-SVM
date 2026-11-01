@@ -5,7 +5,7 @@ conda create --name ml python=3.11
 conda activate ml
 python -m venv .venv
 source .venv/bin/activate
-pip install numpy matplotlib
+pip install numpy matplotlib scikit-learn  # scikit-learn 仅用于实现正确性对照
 ```
 
 # 实验
@@ -34,6 +34,49 @@ python experiments/exp3_highdim.py
 python experiments/exp4_label_noise.py
 ```
 
+## exp5 KNN 算法细节展示 - 邻居选择
+
+```bash
+python experiments/exp5_knn_detail.py
+```
+
+## exp6 SVM 算法细节展示 - 间隔
+
+```bash
+python experiments/exp6_svm_detail.py
+```
+
+## exp7 真实数据集：超参数搜索与最终测试（任务 c）
+
+```bash
+python experiments/exp7_real.py            # 两个数据集都跑
+python experiments/exp7_real.py webspam    # 只跑单个数据集
+python experiments/exp7_replot.py          # 仅按最新 CSV 重绘 exp7 的图（不重跑搜索）
+```
+
+- **样本量**：webspam（30k）直接使用**全量**；HEPMASS（500k）按类别分层、无放回抽取 **100,000** 条（seed=42，全量的 1/5，类别比例与全量一致）。
+- **切分**：train/val/test = 6:2:2（webspam 18000/6000/6000，HEPMASS 60000/20000/20000；`train_val_test_split`，seed=42，与合成实验同一切分逻辑）。
+- **预处理**：z-score 标准化的均值/标准差**仅在训练集上估计**；训练集零方差列丢弃（webspam 129→127 维；HEPMASS 27 维全保留）。同一变换作用于 val/test。
+- **超参数搜索**：grid search 每个超参的训练/验证 accuracy 与 F1；超参仅由验证集 accuracy 选择（并列则取 F1 更高者）。选定参数后在训练集重训、测试集做一次最终评估。
+- **网格**：KNN k ∈ {1,3,5,7,9,11,15,21,31,51} × weights ∈ {uniform, distance}；SVM C ∈ 10⁻²…10⁶。
+
+最终测试结果（`csv/exp7_real_test.csv`）：
+
+| dataset | model | 选出超参 | test acc | test F1 |
+|---|---|---|---|---|
+| webspam（全量 30k） | KNN | k=3, distance | **0.9645** | **0.9711** |
+| webspam（全量 30k） | SVM | C=10⁶ | 0.9307 | 0.9429 |
+| hepmass（100k 子集） | KNN | k=51, distance | 0.9036 | 0.9052 |
+| hepmass（100k 子集） | SVM | C=100 | **0.9071** | **0.9084** |
+
+## 实现正确性对照（sklearn）
+
+```bash
+python experiments/verify_sklearn.py
+```
+
+对合成实验 1-4 的全部设置与实验 7 的最终超参数，用 sklearn 的 KNeighborsClassifier 与线性核 SVC 在相同数据、切分与标准化上重跑，逐行比较测试指标，结果写入 `results/csv/verify_sklearn.csv`（含双方训练目标值）。sklearn 只用于本对照，不参与任何实验结论的计算。
+
 ## 实验结果
 
 结果统一存放在 `results/` 下，按文件类型分两个子文件夹：
@@ -44,16 +87,17 @@ results/
 │   ├── exp1_linear.csv
 │   ├── exp2_circle.csv
 │   ├── exp3_highdim.csv
-│   └── exp4_label_noise.csv
-└── figures/    # 每个实验两张图（KNN / SVM 各一张）：测试集真实标签 vs 模型预测（PNG）
-    ├── exp1_linear_knn.png / exp1_linear_svm.png
-    ├── exp2_circle_knn.png / exp2_circle_svm.png
-    ├── exp3_highdim_knn.png / exp3_highdim_svm.png
-    └── exp4_label_noise_knn.png / exp4_label_noise_svm.png
+│   ├── exp4_label_noise.csv
+│   ├── exp5_knn_detail.csv   # k 扫描指标（train/val/test accuracy）
+│   ├── exp6_svm_detail.csv   # C 扫描指标（间隔宽、支持向量数、accuracy）
+│   ├── exp7_real_search.csv  # 真实数据网格搜索：每个网格点的 train/val accuracy 与 F1 + 耗时
+│   └── exp7_real_test.csv    # 真实数据最终测试指标（超参由验证集选出）
+│   └── verify_sklearn.csv    # 与 sklearn 的对照结果（每行含双方指标、差异与训练目标值）
+└── figures/    # 每个实验一张合并图（按印刷尺寸生成，300 dpi）：[真实标签 | KNN 预测 | SVM 预测]
+    ├── exp1_linear.png / exp2_circle.png / exp3_highdim.png / exp4_label_noise.png
+    ├── exp5_knn_neighbors.png / exp5_knn_ksweep.png
+    ├── exp6_svm_margin.png / exp6_svm_c_sweep.png
+    └── exp7_{webspam,hepmass}.png
 ```
 
-图片说明：每张图左子图为测试集按真实标签染色（+1 蓝 / −1 红）并叠加真实（Bayes）边界；右子图为同一批测试点按模型预测染色，误分类点以 × 标注；图例统一置于图下方。
-
-- exp1 / exp2（二维）：右子图背景为二维网格预测着色的决策区域，加粗线为决策边界（SVM 即超平面 w·x + b = 0）。
-- exp3（3D）：三轴为维度 1–3，展示框三条轴的相对长度为 1/2 : 1 : 1（维度 1 取值范围远小于噪声维度 N(0,10)，适度压缩其轴长以兼顾可读性；比例尺不等于数据真实比例）；SVM 超平面切片以半透明平面绘制（未展示维度固定为测试集均值），真实边界 x₁ = 0 为虚线线框平面；KNN 无全局边界，仅展示染色散点。
-- exp4（二维，结构性标签噪声）：仅训练集被注入 η 比例的错标点——+1 类错标点沿真实边界的投影 t ~ N(+3, 0.5²)、−1 类 t ~ N(−3, 0.5²)（同标准差、均值显著不同），深度 s ~ U(1.0, 1.6)，带相反的观测标签；验证/测试标签干净。右子图以空心三角展示这些错标点（按观测标签着色）。预期观察：系统性错标簇对线性 SVM 的超平面产生一致「扭矩」，使其偏转、精度随 η 下降；KNN 仅在簇附近局部受影响；同时用 acc–C 曲线检验「C 越大扭转越强」的直觉。
+图片说明：合成实验的合并图中，左格为测试集按真实标签染色（+1 蓝 / −1 红）并叠加真实（Bayes）边界；中格与右格为同一批测试点分别按 KNN / SVM 预测染色，误分类点以 × 标注，背景为二维网格逐点预测着色的决策区域，加粗线为决策边界。exp3 为 3D 版本（SVM 超平面切片以半透明平面绘制，真实边界 x₁ = 0 为虚线线框）；exp4 各预测格以空心三角展示注入训练集的错标点。exp7 为搜索曲线，左格 KNN 的 k 扫描、右格 SVM 的 C 扫描，星标验证集最优点。报告 `docs/paper.pdf` 直接从 `results/figures/` 读取图片，重新生成图片后重编译即可。

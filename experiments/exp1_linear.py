@@ -4,7 +4,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from src.datasets.synthetic import make_linear, train_val_test_split
-from src.eval.plotting import plot_test_comparison
+from src.eval.plotting import plot_boundary_comparison
 from src.run import FIG_DIR, CSV_DIR, format_table, run_experiment, save_csv
 
 MU = 2.0
@@ -18,7 +18,7 @@ records = []
 arts = None
 for sigma in SIGMAS:
     X, y = make_linear(N, mu=MU, sigma=sigma, seed=42)
-    X_train, X_val, X_test, y_train, y_val, y_test = train_val_test_split(X, y, seed=0)
+    X_train, X_val, X_test, y_train, y_val, y_test = train_val_test_split(X, y, seed=42)
     if sigma == SHOW_SIGMA:
         rec, arts = run_experiment(
             X_train, y_train, X_val, y_val, X_test, y_test,
@@ -35,16 +35,10 @@ print("exp1: linearly (near-)separable data")
 print(format_table(records))
 save_csv(records, CSV_DIR / "exp1_linear.csv")
 
-BOUNDARY_LABELS = {
-    "knn": "KNN 决策边界（多数投票切换处）",
-    "svm": "SVM 超平面（w·x + b = 0）",
-}
-for name, a in arts.items():
-    plot_test_comparison(
-        *show_split, a["pred"],
-        model=a["model"],
-        out_path=FIG_DIR / f"exp1_linear_{name}.png",
-        feature_names=("$x_1$", "$x_2$"),
-        true_score=lambda G: G[:, 0],
-        boundary_label=BOUNDARY_LABELS[name],
-    )
+plot_boundary_comparison(
+    *show_split,
+    [(name.upper(), {"pred": a["pred"], "model": a["model"]}) for name, a in arts.items()],
+    out_path=FIG_DIR / "exp1_linear.png",
+    feature_names=("$x_1$", "$x_2$"),
+    true_score=lambda G: G[:, 0],
+)

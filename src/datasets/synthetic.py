@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def train_val_test_split(X, y, val_size=0.2, test_size=0.2, seed=0):
+def train_val_test_split(X, y, val_size=0.2, test_size=0.2, seed=42):
     X = np.asarray(X)
     y = np.asarray(y)
     rng = np.random.default_rng(seed)
@@ -12,7 +12,7 @@ def train_val_test_split(X, y, val_size=0.2, test_size=0.2, seed=0):
     return X[train_idx], X[val_idx], X[test_idx], y[train_idx], y[val_idx], y[test_idx]
 
 
-def make_linear(n, mu=2.0, sigma=1.0, seed=0):
+def make_linear(n, mu=2.0, sigma=1.0, seed=42):
     rng = np.random.default_rng(seed)
     y = rng.choice([-1, 1], size=n)
     X = np.empty((n, 2))
@@ -21,7 +21,7 @@ def make_linear(n, mu=2.0, sigma=1.0, seed=0):
     return X, y
 
 
-def make_circles(n, r_in=1.0, r_out_lo=1.4, r_out_hi=2.4, seed=0):
+def make_circles(n, r_in=1.0, r_out_lo=1.4, r_out_hi=2.4, seed=42):
     rng = np.random.default_rng(seed)
     n_in = n // 2
     n_out = n - n_in
@@ -40,7 +40,7 @@ def make_circles(n, r_in=1.0, r_out_lo=1.4, r_out_hi=2.4, seed=0):
     return X[idx], y[idx]
 
 
-def make_sparse_highdim(n, d=50, mu=2.0, sigma=0.5, seed=0):
+def make_sparse_highdim(n, d=50, mu=2.0, sigma=0.5, seed=42):
     rng = np.random.default_rng(seed)
     y = rng.choice([-1, 1], size=n)
     X = rng.normal(0.0, 5.0, (n, d))
@@ -48,33 +48,24 @@ def make_sparse_highdim(n, d=50, mu=2.0, sigma=0.5, seed=0):
     return X, y
 
 
-def make_linear_rule(n, seed=0):
+def make_linear_rule(n, seed=42):
     rng = np.random.default_rng(seed)
     X = rng.normal(0.0, 1.0, (n, 2))
     y = np.where(X[:, 0] + 0.5 * X[:, 1] >= 0, 1, -1)
     return X, y
 
 
-def flip_labels(y, eta, seed=0):
+def flip_labels(y, eta, seed=42):
     y = np.asarray(y)
     rng = np.random.default_rng(seed)
     flip = rng.random(len(y)) < eta
     return np.where(flip, -y, y)
 
-
-# make_linear_rule 的真实超平面 x1 + 0.5*x2 = 0 的坐标：n̂ 为单位法向，v 为沿边界单位方向
+# make_linear_rule 的真实超平面 x1 + 0.5*x2 = 0 的坐标：n_hat 为单位法向量，v 为切线方向
 _N_HAT = np.array([1.0, 0.5]) / np.sqrt(1.25)
 _V_ALONG = np.array([-0.5, 1.0]) / np.sqrt(1.25)
 
-
-def inject_structured_flips(X, y, eta, mu=3.0, sigma_t=2, s_lo=1.0, s_hi=1.6, seed=7):
-    """向训练集注入「结构性错标」样本并返回增广后的 (X_aug, y_aug, X_flip, y_flip_obs)。
-
-    机制：+1 类的错标点位于真实边界正侧、沿边界坐标 t ~ N(+mu, sigma_t^2)，
-    深度 s ~ U(s_lo, s_hi)；-1 类对称地位于 t ~ N(-mu, sigma_t^2)。两类错标点
-    的 t 分布标准差相同、均值显著不同（+mu vs -mu），在真实边界远端形成方向
-    一致的「扭矩」。eta 为注入数量占原训练集的比例。错标点带相反的观测标签。
-    """
+def inject_structured_flips(X, y, eta, mu=3.0, sigma_t=2, s_lo=1.0, s_hi=1.6, seed=42):
     X = np.asarray(X, dtype=float)
     y = np.asarray(y)
     rng = np.random.default_rng(seed)

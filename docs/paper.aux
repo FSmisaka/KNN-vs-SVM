@@ -1,0 +1,62 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}算法实现}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}KNN 的实现}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}SVM 的实现}{1}{}\protected@file@percent }
+\newlabel{eq:svm}{{1}{1}{}{equation.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}正确性检查}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}合成数据实验}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}实验 1 \hskip 1em\relax 线性可分数据}{1}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces 实验 1、2 的测试集准确率。实验 2 的单位圆为 $r\le 1$，外环为 $1.4\le r\le 2.4$}}{2}{}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:syn12}{{1}{2}{}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 实验 1 在 $\sigma {=}1.5$ 下的决策边界，其模型超参由验证集选出。左子图为真实标签与边界 $x_1=0$。中间 KNN 的边界是多数投票切换处，锯齿集中在重叠带内，测试准确率 0.929。右子图 SVM 的边界是超平面 $w\cdot x+b=0$，测试准确率 0.917。}}{2}{}\protected@file@percent }
+\newlabel{fig:exp1}{{1}{2}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}实验 2 \hskip 1em\relax 非线性边界}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}实验 3 \hskip 1em\relax 高维数据}{2}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 实验 2 的决策边界。左子图为真实标签，中间为 KNN，右子图是 SVM。KNN 选出 $k{=}1$，决策区域弯成环带，准确率 1.000。线性 SVM 只能切出半个平面，准确率 0.629。}}{3}{}\protected@file@percent }
+\newlabel{fig:exp2}{{2}{3}{}{figure.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 实验 3 测试集准确率}}{3}{}\protected@file@percent }
+\newlabel{tab:exp3}{{2}{3}{}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}实验 4 \hskip 1em\relax 系统性标签噪声}{3}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 实验 3 在 $d{=}200$ 时的三维视角，从左到右为真实标签、KNN 与 SVM。轴为维度 1 至 3 且维度 1 是唯一有效维度。SVM 子图中半透明平面为超平面在其余维度取测试集均值处的切片，虚线框为真实边界 $x_1=0$，两者几乎重合，测试集准确率达到 0.840。KNN 的预测着色已对不上真实标签，准确率只有 0.500。}}{4}{}\protected@file@percent }
+\newlabel{fig:exp3}{{3}{4}{}{figure.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces 实验 4 测试集准确率与超参数 $C$ 的选择}}{4}{}\protected@file@percent }
+\newlabel{tab:exp4}{{3}{4}{}{table.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}算法机制展示}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}KNN 的邻居选择}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 实验 4 在 $\eta {=}0.02$ 下的决策边界。左子图为真实标签，中间为 KNN，右子图是 SVM。空心三角为注入训练集的翻转点，按观测标签着色，KNN 的边界只在错标点附近出现变化，SVM 的超平面则整体向错标方向偏转，虚线为真实边界 $x_1+0.5x_2=0$。}}{5}{}\protected@file@percent }
+\newlabel{fig:exp4}{{4}{5}{}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces KNN 实例级邻居选择。黑色虚线圆表示直至第 $k$ 近邻的邻域半径。左子图采用均匀投票，预测为红色，分类错误。右子图采用距离加权，预测为蓝色，分类正确。}}{5}{}\protected@file@percent }
+\newlabel{fig:exp5nb}{{5}{5}{}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}SVM 的间隔与 $C$}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces KNN 按 $k$ 扫描。从左到右依次为 $k{=}1$、11、21，训练标签含 8\% 随机翻转。$k{=}1$ 时模型会追逐翻转点，从而出现一个个孤岛。从评价指标来看，$k{=}21$ 最好，$k{=}11$ 略低。}}{6}{}\protected@file@percent }
+\newlabel{fig:exp5k}{{6}{6}{}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces SVM 间隔。实线为超平面，虚线为间隔边界 $w\cdot x+b=\pm 1$，阴影为间隔带，空心圈为支持向量，共 9 个，间隔宽 $2/\lVert w\rVert =1.22$。}}{6}{}\protected@file@percent }
+\newlabel{fig:exp6m}{{7}{6}{}{figure.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}真实数据集与超参数搜索}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}实验设置}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces SVM 按 $C$ 扫描。从左到右为间隔宽、支持向量数与准确率随 $C$ 的变化，圆点标出 $C=0.1$、10、$10^{4}$ 三个取值。只针对本次展示的数据来看，准确率对 $C$ 并不敏感。}}{7}{}\protected@file@percent }
+\newlabel{fig:exp6c}{{8}{7}{}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}实验结果}{7}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces 真实数据的测试集准确率、F1 与耗时}}{7}{}\protected@file@percent }
+\newlabel{tab:exp7}{{4}{7}{}{table.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces webspam 上的超参搜索曲线，训练集与验证集准确率随超参数变化，星标为验证集选出的最优点。左子图 KNN 中实线为均匀加权、虚线为按距离加权，右子图为 SVM。}}{8}{}\protected@file@percent }
+\newlabel{fig:ws}{{9}{8}{}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces HEPMASS 上的超参搜索曲线，含义同图~\ref {fig:ws}。}}{8}{}\protected@file@percent }
+\newlabel{fig:hm}{{10}{8}{}{figure.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}适用性判断}{8}{}\protected@file@percent }
+\gdef \LT@i {\LT@entry 
+    {4}{31.00002pt}\LT@entry 
+    {4}{67.00002pt}\LT@entry 
+    {4}{28.66982pt}\LT@entry 
+    {1}{72.83984pt}\LT@entry 
+    {1}{81.71947pt}\LT@entry 
+    {1}{72.83984pt}\LT@entry 
+    {1}{23.50002pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {附录~A}实现正确性对照结果}{9}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {A1}{\ignorespaces 实现正确性的合成实验对照结果}}{9}{}\protected@file@percent }
+\newlabel{tab:verify_syn}{{A1}{9}{}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A2}{\ignorespaces 实现正确性的真实实验对照结果}}{10}{}\protected@file@percent }
+\newlabel{tab:verify_real}{{A2}{10}{}{table.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {附录~B}复现说明}{10}{}\protected@file@percent }
+\gdef \@abspage@last{10}
