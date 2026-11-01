@@ -8,6 +8,10 @@ source .venv/bin/activate
 pip install numpy matplotlib scikit-learn  # scikit-learn 仅用于实现正确性对照
 ```
 
+# 数据
+
+把 HEPMASS_500k.csv 和 webspam_30k.svm 放置到 /data 文件夹下
+
 # 实验
 
 ## exp1 线性可分

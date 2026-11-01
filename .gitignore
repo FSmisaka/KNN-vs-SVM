@@ -16,10 +16,12 @@ venv/
 .idea/
 .vscode/
 
-# Data (raw datasets, too large for git)
-data/
+# Data (raw datasets, too large for git), keep the directory itself
+data/*
+!data/.gitkeep
 
-# Experiment outputs (regenerable)
-results/
+# Experiment outputs (regenerable), keep the directory itself
+results/*
+!results/.gitkeep
 
 docs/
