@@ -291,7 +291,7 @@ KNN 对照 KNeighborsClassifier，超参数直接取我们在验证集上选出�
 {\normalsize
 \setlength{\tabcolsep}{3.5pt}
 \begin{longtable}{@{}llccccc@{}}
-\caption{实现正确性的合成实验对照结果}
+\caption{实现正确性的合成数据实验对照结果}
 \label{tab:verify_syn}\\
 \toprule
 实验 & 设置 & 模型 & 我方 准确率/F1 & sklearn 准确率/F1 & 差异 准确率/F1 & 一致 \\
@@ -340,7 +340,7 @@ KNN 对照 KNeighborsClassifier，超参数直接取我们在验证集上选出�
 
 \begin{minipage}{\linewidth}
 \centering
-\captionof{table}{实现正确性的真实实验对照结果}
+\captionof{table}{实现正确性的真实数据实验对照结果}
 \label{tab:verify_real}
 \normalsize
 \setlength{\tabcolsep}{3.5pt}
@@ -363,11 +363,11 @@ KNN 对照 KNeighborsClassifier，超参数直接取我们在验证集上选出�
 {\footnotesize
 \begin{minipage}{\linewidth}
 \begin{verbatim}
-python experiments/verify_sklearn.py               # 与 sklearn 对照
 python experiments/exp{1_linear,2_circle,3_highdim}.py
 python experiments/exp{4_label_noise,5_knn_detail,6_svm_detail}.py
 python experiments/exp7_real.py [webspam|hepmass]  # 默认跑两个数据集
 python experiments/exp7_replot.py                  # 按最新 CSV 绘图
+python experiments/verify_sklearn.py               # 与 sklearn 对照
 \end{verbatim}
 \end{minipage}
 }

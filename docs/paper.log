@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.15)  1 NOV 2026 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.15)  1 NOV 2026 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,84 +382,84 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -527,20 +527,20 @@ LaTeX Font Info:    ... okay on input line 44.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 44.
-Package microtype Info: Applying patch `item' on input line 44.
-Package microtype Info: Applying patch `toc' on input line 44.
-Package microtype Info: Applying patch `eqnum' on input line 44.
-Package microtype Info: Applying patch `footnote' on input line 44.
-Package microtype Info: Applying patch `verbatim' on input line 44.
-LaTeX Info: Redefining \microtypesetup on input line 44.
+LaTeX Info: Redefining \microtypecontext on input line 38.
+Package microtype Info: Applying patch `item' on input line 38.
+Package microtype Info: Applying patch `toc' on input line 38.
+Package microtype Info: Applying patch `eqnum' on input line 38.
+Package microtype Info: Applying patch `footnote' on input line 38.
+Package microtype Info: Applying patch `verbatim' on input line 38.
+LaTeX Info: Redefining \microtypesetup on input line 38.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 44.
+LaTeX Info: Redefining \showhyphens on input line 38.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -582,7 +582,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 File: UTF8.chr 2021/10/16 4.8.5
 )
 LaTeX Font Info:    Trying to load font information for C70+gbsn on input line 
-48.
+42.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/c70gbsn.fd
 File: c70gbsn.fd 2021/10/16 4.8.5
@@ -592,13 +592,13 @@ File: c70gbsn.fdx 2021/10/16 4.8.5
 )
 
 LaTeX Font Warning: Font shape `C70/gbsn/b/n' undefined
-(Font)              using `C70/gbsn/m/n' instead on input line 48.
+(Font)              using `C70/gbsn/m/n' instead on input line 42.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -607,7 +607,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -632,13 +632,13 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2025
 File: ../results/figures/exp1_linear.png Graphic file (type png)
 <use ../results/figures/exp1_linear.png>
 Package pdftex.def Info: ../results/figures/exp1_linear.png  used on input line
- 101.
+ 95.
 (pdftex.def)             Requested size: 397.48499pt x 158.38527pt.
 <../results/figures/exp2_circle.png, id=143, 405.6756pt x 181.3977pt>
 File: ../results/figures/exp2_circle.png Graphic file (type png)
 <use ../results/figures/exp2_circle.png>
 Package pdftex.def Info: ../results/figures/exp2_circle.png  used on input line
- 114.
+ 108.
 (pdftex.def)             Requested size: 397.48499pt x 177.74084pt.
 
 
@@ -647,7 +647,7 @@ Package pdftex.def Info: ../results/figures/exp2_circle.png  used on input line
 File: ../results/figures/exp3_highdim.png Graphic file (type png)
 <use ../results/figures/exp3_highdim.png>
 Package pdftex.def Info: ../results/figures/exp3_highdim.png  used on input lin
-e 147.
+e 141.
 (pdftex.def)             Requested size: 397.48499pt x 199.77322pt.
 
 
@@ -656,7 +656,7 @@ e 147.
 File: ../results/figures/exp4_label_noise.png Graphic file (type png)
 <use ../results/figures/exp4_label_noise.png>
 Package pdftex.def Info: ../results/figures/exp4_label_noise.png  used on input
- line 179.
+ line 173.
 (pdftex.def)             Requested size: 397.48499pt x 189.20847pt.
 
 
@@ -665,13 +665,13 @@ Package pdftex.def Info: ../results/figures/exp4_label_noise.png  used on input
 File: ../results/figures/exp5_knn_neighbors.png Graphic file (type png)
 <use ../results/figures/exp5_knn_neighbors.png>
 Package pdftex.def Info: ../results/figures/exp5_knn_neighbors.png  used on inp
-ut line 196.
+ut line 190.
 (pdftex.def)             Requested size: 337.86465pt x 198.73743pt.
 <../results/figures/exp5_knn_ksweep.png, id=180, 405.6756pt x 155.3805pt>
 File: ../results/figures/exp5_knn_ksweep.png Graphic file (type png)
 <use ../results/figures/exp5_knn_ksweep.png>
 Package pdftex.def Info: ../results/figures/exp5_knn_ksweep.png  used on input 
-line 203.
+line 197.
 (pdftex.def)             Requested size: 397.48499pt x 152.24811pt.
 
 
@@ -681,13 +681,13 @@ bors.png>]
 File: ../results/figures/exp6_svm_margin.png Graphic file (type png)
 <use ../results/figures/exp6_svm_margin.png>
 Package pdftex.def Info: ../results/figures/exp6_svm_margin.png  used on input 
-line 216.
+line 210.
 (pdftex.def)             Requested size: 286.18967pt x 250.50375pt.
 <../results/figures/exp6_svm_c_sweep.png, id=189, 420.1296pt x 162.1257pt>
 File: ../results/figures/exp6_svm_c_sweep.png Graphic file (type png)
 <use ../results/figures/exp6_svm_c_sweep.png>
 Package pdftex.def Info: ../results/figures/exp6_svm_c_sweep.png  used on input
- line 223.
+ line 217.
 (pdftex.def)             Requested size: 397.48499pt x 153.38771pt.
 
 
@@ -697,13 +697,13 @@ Package pdftex.def Info: ../results/figures/exp6_svm_c_sweep.png  used on input
 File: ../results/figures/exp7_webspam.png Graphic file (type png)
 <use ../results/figures/exp7_webspam.png>
 Package pdftex.def Info: ../results/figures/exp7_webspam.png  used on input lin
-e 264.
+e 258.
 (pdftex.def)             Requested size: 397.48499pt x 173.01994pt.
 <../results/figures/exp7_hepmass.png, id=197, 405.6756pt x 176.5797pt>
 File: ../results/figures/exp7_hepmass.png Graphic file (type png)
 <use ../results/figures/exp7_hepmass.png>
 Package pdftex.def Info: ../results/figures/exp7_hepmass.png  used on input lin
-e 271.
+e 265.
 (pdftex.def)             Requested size: 397.48499pt x 173.01994pt.
 
 
@@ -711,7 +711,7 @@ e 271.
 
 [8 <../results/figures/exp7_webspam.png> <../results/figures/exp7_hepmass.png>]
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 370--380
+Underfull \hbox (badness 10000) in paragraph at lines 364--374
 
  []
 
@@ -730,7 +730,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  11149 strings out of 473190
  175160 string characters out of 5715800
- 616112 words of memory out of 5000000
+ 616122 words of memory out of 5000000
  33958 multiletter control sequences out of 15000+600000
  620420 words of font info for 242 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -816,7 +816,7 @@ uff.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt090
 0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 1902086 bytes).
+Output written on paper.pdf (10 pages, 1902115 bytes).
 PDF statistics:
  573 PDF objects out of 1000 (max. 8388607)
  288 compressed objects within 3 object streams
