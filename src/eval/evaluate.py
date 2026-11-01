@@ -25,11 +25,6 @@ def grid_search(model, param_grid, X_train, y_train, X_val, y_val):
 
 
 def grid_search_curves(model, param_grid, X_train, y_train, X_val, y_val):
-    """网格搜索并记录每个网格点的训练/验证指标（accuracy 与 F1）及耗时。
-
-    返回 (best_params, records)：best 按验证集 accuracy 选择（并列时取 F1 更高者），
-    测试集不参与选择。
-    """
     keys = list(param_grid)
     combos = (
         [dict(zip(keys, values)) for values in itertools.product(*param_grid.values())]

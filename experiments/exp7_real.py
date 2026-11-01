@@ -1,29 +1,3 @@
-"""exp7 真实数据集：KNN vs SVM 的超参数搜索与最终测试（任务 c）。
-
-协议（对两个数据集、两种模型完全一致，保证比较公平）：
-1. 样本量：webspam（30k，课程已从原始 350k 抽取）直接使用全量；HEPMASS（500k）
-   按类别分层、无放回抽取 100,000 条（seed=42，全量的 1/5，类别比例与全量一致）。
-   HEPMASS 不用全量的原因：自实现 KNN 的预测需计算 n_query×n_train 稠密距离矩阵，
-   全量 500k 切分后一次训练集自预测即 300k×300k≈720 GB，网格 20 个组合需数小时，
-   故按作业说明以固定种子子集进行（webspam 与 HEPMASS 用同一套协议，仅样本量不同）。
-2. train/val/test = 6:2:2（train_val_test_split, seed=42，与合成实验同一切分逻辑）。
-3. 标准化的均值/标准差仅在训练集上估计；训练集零方差列（webspam 未出现的原始特征）被丢弃，
-   同一变换作用于验证/测试集。
-4. 网格搜索记录每个网格点的训练/验证 accuracy 与 F1；超参数仅由验证集 accuracy 选择
-   （并列时取 F1 更高者），测试集不参与任何选择。
-5. 选定超参数后仅在训练集上重训，测试集做一次最终评估。
-
-指标选择理由：
-- accuracy：两数据集的类别不平衡都不极端（webspam 正类 60.7%、HEPMASS 50.1%），
-  accuracy 是与文献可比的总体指标；
-- F1：webspam 中"把垃圾页漏判为正常页"与"误杀正常页"代价不对称，且正类为关注类，
-  F1 对少数类的查准/查全更敏感，可防止 accuracy 被多数类主导的假象；
-- HEPMASS 近乎平衡，F1 与 accuracy 接近，报告二者仅为协议统一。
-
-运行：python experiments/exp7_real.py [webspam|hepmass ...]（默认两个数据集都跑）
-参考耗时（M4 / 24GB）：webspam 约 4 分钟，hepmass 约 35 分钟（KNN 训练集自预测为主）。
-"""
-
 import sys
 import time
 from pathlib import Path

@@ -99,5 +99,3 @@ results/
     ├── exp6_svm_margin.png / exp6_svm_c_sweep.png
     └── exp7_{webspam,hepmass}.png
 ```
-
-图片说明：合成实验的合并图中，左格为测试集按真实标签染色（+1 蓝 / −1 红）并叠加真实（Bayes）边界；中格与右格为同一批测试点分别按 KNN / SVM 预测染色，误分类点以 × 标注，背景为二维网格逐点预测着色的决策区域，加粗线为决策边界。exp3 为 3D 版本（SVM 超平面切片以半透明平面绘制，真实边界 x₁ = 0 为虚线线框）；exp4 各预测格以空心三角展示注入训练集的错标点。exp7 为搜索曲线，左格 KNN 的 k 扫描、右格 SVM 的 C 扫描，星标验证集最优点。报告 `docs/paper.pdf` 直接从 `results/figures/` 读取图片，重新生成图片后重编译即可。

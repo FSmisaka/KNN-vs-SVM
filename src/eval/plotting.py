@@ -54,7 +54,6 @@ def setup_style():
         }
     )
 
-
 def _make_lifter(X_ref, dims):
     """返回 lift(G2)：把展示平面上的点补全为完整维度的向量。
 
@@ -75,13 +74,11 @@ def _make_lifter(X_ref, dims):
 
     return lift
 
-
 def _predict_grid(model, G2, lift, chunk=2048):
     out = np.empty(len(G2), dtype=int)
     for i in range(0, len(G2), chunk):
         out[i : i + chunk] = model.predict(lift(G2[i : i + chunk]))
     return out
-
 
 def _grid(X_disp, n_grid=240, pad=0.12):
     lo = X_disp.min(axis=0)
@@ -93,7 +90,6 @@ def _grid(X_disp, n_grid=240, pad=0.12):
     xx, yy = np.meshgrid(xs, ys)
     G2 = np.stack([xx.ravel(), yy.ravel()], axis=1)
     return xx, yy, G2, lims
-
 
 def plot_boundary_comparison(
     X_test,
@@ -171,7 +167,6 @@ def plot_boundary_comparison(
             ax.scatter(E[me, 0], E[me, 1], marker="^", s=24, facecolors="none", edgecolors=C_POS, linewidths=1.0, zorder=2.5)
             ax.scatter(E[~me, 0], E[~me, 1], marker="^", s=24, facecolors="none", edgecolors=C_NEG, linewidths=1.0, zorder=2.5)
 
-
     # ---- 图例：整图下方 ----
     handles = [
         Line2D([], [], marker="o", ls="none", color="none", markerfacecolor=C_POS, markeredgecolor="#B9C6D9", markersize=5, label="y = +1"),
@@ -189,7 +184,6 @@ def plot_boundary_comparison(
     fig.savefig(out_path, dpi=SAVE_DPI, bbox_inches="tight")
     plt.close(fig)
     return out_path
-
 
 def plot_search_curves_combined(
     knn_records,
@@ -268,10 +262,7 @@ def plot_search_curves_combined(
     plt.close(fig)
     return out_path
 
-
-# ---------------------------------------------------------------------------
 # 3D 版本：展示三个维度，SVM 超平面绘制为平面（与展示长方体精确裁剪）
-# ---------------------------------------------------------------------------
 
 def _plane_box_polygon(W, c, lo, hi):
     """平面 {p: W·p + c = 0} 与长方体 [lo, hi]^3 的交集多边形。
@@ -312,7 +303,6 @@ def _plane_box_polygon(W, c, lo, hi):
     ang = np.arctan2(d @ e2, d @ e1)
     return P[np.argsort(ang)]
 
-
 def _svm_plane_in_display(model, ref, dims):
     """把线性 SVM 的超平面映射到展示三维坐标系：返回 (W, c)，平面为 W·p + c = 0。
 
@@ -326,7 +316,6 @@ def _svm_plane_in_display(model, ref, dims):
     c = b + float(w @ base - W @ base[list(dims)])
     return W, c
 
-
 def _style_3d_axis(ax, box_aspect=(1, 1, 1)):
     # 展示框三条轴的相对长度（默认立方体）；比例尺不一定等于数据真实比例
     ax.set_box_aspect(box_aspect)
@@ -338,7 +327,6 @@ def _style_3d_axis(ax, box_aspect=(1, 1, 1)):
         pane.set_edgecolor("#D5D9E0")
     ax.tick_params(colors="#444950", labelsize=8.5)
 
-
 def _front_back_alpha(P, plane, a_front=0.95, a_back=0.30):
     """按点在平面的哪一侧返回逐点透明度：w·x + b > 0 一侧醒目，< 0 一侧变浅。"""
     W = np.asarray(plane[0], dtype=float)
@@ -346,13 +334,11 @@ def _front_back_alpha(P, plane, a_front=0.95, a_back=0.30):
     front = P @ W + c > 0
     return np.where(front, a_front, a_back)
 
-
 def _rgba(color, alphas):
     """把单色 + 逐点透明度拼成 (n, 4) RGBA 数组（scatter 逐点透明度）。"""
     alphas = np.asarray(alphas, dtype=float)
     rgb = np.tile(np.array(to_rgb(color)), (len(alphas), 1))
     return np.column_stack([rgb, alphas])
-
 
 def plot_boundary_comparison_3d(
     X_test,
